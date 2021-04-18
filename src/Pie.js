@@ -2,11 +2,11 @@ import React from 'react';
 import {Pie, Doughnut} from 'react-chartjs-2';
 
 const state = {
-  labels: ['January', 'February', 'March',
-           'April', 'May'],
+  labels: ['Valorant', 'CS-Global Offensive', 'Rainbow-6',
+           'Paladins', 'Hitman'],
   datasets: [
     {
-      label: 'Rainfall',
+      label: 'Gamers',
       backgroundColor: [
         '#B21F00',
         '#C9DE00',
@@ -35,7 +35,7 @@ export default class Piec extends React.Component {
           options={{
             title:{
               display:true,
-              text:'Average Rainfall per month',
+              text:'Game Players',
               fontSize:20
             },
             legend:{
@@ -50,7 +50,7 @@ export default class Piec extends React.Component {
           options={{
             title:{
               display:true,
-              text:'Average Rainfall per month',
+              text:'Game Players',
               fontSize:20
             },
             legend:{

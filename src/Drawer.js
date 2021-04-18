@@ -18,6 +18,9 @@ import Barr from './Bar'
 import Table from './Table'
 import Table2 from './Table2'
 import Table3 from './Table3'
+import Landing from './vibranium/Landing';
+import faker from 'faker'
+import '../src/App.css'
 
 
 const drawerWidth = 240;
@@ -49,9 +52,11 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    backgroundColor:"gradient",
   },
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor:"gradient",
   },
   drawerHeader: {
     display: 'flex',
@@ -78,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
   },
   container: {
+    backgroundColor:"gradient",
     paddingTop: theme.spacing(7),
     paddingBottom: theme.spacing(7),
   },
@@ -87,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
 },
 bg:
 {
-  backgroundColor:"pink"
+  backgroundColor:"black"
 }
 }));
 
@@ -95,7 +101,7 @@ export default function PersistentDrawerLeft(props) {
   const classes = useStyles();
   
   const [open, setOpen] = React.useState(false);
-  const [view,setView]=useState(<Ch/>)
+  const [view,setView]=useState(<Landing/>)
   
 
   const handleDrawerOpen = () => {
@@ -106,7 +112,9 @@ export default function PersistentDrawerLeft(props) {
     setOpen(false);
   };
   const setContainerView=(n)=>
- { if(n===1)
+ { if(n===0)
+  {setView(<Landing/>)}
+  else if(n===1)
    {setView(<Ch />)}
    else if(n===2)
    {setView(<Pie/>)}
@@ -139,6 +147,13 @@ export default function PersistentDrawerLeft(props) {
           <Typography variant="h6" noWrap>
             Dashboard
           </Typography>
+          
+            <div style={{paddingLeft:"900px"}}>
+            <button className="small ui right floated red button" >Login</button>
+            </div>
+            <a href="/" className="ui right floated mini circular image"  style={{paddingLeft:"0px"}} >
+             <img alt="avatar" src={faker.image.avatar()}/>
+            </a>
         </Toolbar>
       </AppBar>
       <Drawer

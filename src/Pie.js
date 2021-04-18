@@ -3,7 +3,7 @@ import {Pie, Doughnut} from 'react-chartjs-2';
 
 const state = {
   labels: ['Valorant', 'CS-Global Offensive', 'Rainbow-6',
-           'Paladins', 'Hitman'],
+           'Paladins', 'Fortnite'],
   datasets: [
     {
       label: 'Gamers',

@@ -52,11 +52,11 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
-    backgroundColor:"gradient",
+    
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor:"gradient",
+    
   },
   drawerHeader: {
     display: 'flex',
@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(7),
   },
   bar:{
-    backgroundColor:"black",
+    backgroundColor:"#fc4c4e",
     borderBottom: "2px grey"
 },
 bg:
@@ -149,7 +149,7 @@ export default function PersistentDrawerLeft(props) {
           </Typography>
           
             <div style={{paddingLeft:"900px"}}>
-            <button className="small ui right floated red button" >Login</button>
+            <button className="small ui right floated white button" >Login</button>
             </div>
             <a href="/" className="ui right floated mini circular image"  style={{paddingLeft:"0px"}} >
              <img alt="avatar" src={faker.image.avatar()}/>

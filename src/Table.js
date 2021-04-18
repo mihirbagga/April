@@ -1,6 +1,6 @@
 import React from 'react'
 import './Table.css'
-import { AddBox, ArrowDownward } from "@material-ui/icons";
+
 import MaterialTable from "material-table";
 const data = [
     { name: "Mihir", email: "mihirbagga@gmail.com", age: 21, game: "Valorant" },
